@@ -1,0 +1,44 @@
+# Muhammad Junaid — Portfolio Project Notes
+
+This file gives AI assistants and automated tools concise, project-specific context.
+
+## Project
+
+- Name: Muhammad Junaid Personal Portfolio
+- Type: Static, single-page personal portfolio website
+- Purpose: Present the owner's background, skills, projects, and ways to get in touch.
+- Main document: `index.html`
+- There is no framework, package manager, build step, or backend in this repository.
+
+## Stack and files
+
+- HTML5 content and SEO metadata: `index.html`
+- Vanilla JavaScript interactions: `main.js`
+- Design tokens and light/dark theme variables: `css/tokens.css`
+- Component styling and responsive layouts: `css/styles.css`
+- Portfolio images: `images/`
+- SVG interface and technology icons: `icons/`
+- Crawler directives and sitemap: `robots.txt`, `sitemap.xml`
+
+## Page sections and behavior
+
+- Home/hero introduction and profile image
+- About section and CV download link
+- Skills: HTML5, CSS3, JavaScript, Tailwind CSS, Git/GitHub, responsive design
+- Projects: Gigora, BIQS Academy Bahawalpur, and ClearPay
+- Contact form, email, WhatsApp, and social links
+- JavaScript manages the mobile navigation, theme toggle/local storage, form validation and Formspree request, active navigation section, and scroll-to-top control.
+
+## Editing guidance
+
+- Keep the site dependency-free unless a requested feature needs a dependency.
+- Reuse the CSS variables in `css/tokens.css` when changing colors or spacing.
+- Keep HTML section IDs in sync with navigation links and the section observer in `main.js`.
+- Preserve accessible labels, keyboard behavior, and responsive layouts when editing controls.
+- Contact submissions use the Formspree endpoint in the form's `action` attribute; do not replace it without the owner's endpoint.
+- Production URL: https://junaid-dev-portfolio-alpha.vercel.app/ . This hostname is configured in the page metadata, `robots.txt`, and `sitemap.xml`. If a custom domain is connected later, update those references together.
+- The CV link points to `assets/files/Muhammad-Junaid-CV.pdf`; confirm that file exists before describing the download as available.
+
+## Local preview and hosting
+
+Serve the repository root as static files (for example, `python -m http.server 8000`) and open `http://localhost:8000`. The site can be hosted on Vercel or another static host without a build command.

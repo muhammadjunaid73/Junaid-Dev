@@ -66,6 +66,10 @@
 }
 
 [data-theme="dark"] {
+  /* Keep accent text readable against dark surfaces. */
+  --color-primary: #60a5fa;
+  --color-primary-dark: #93c5fd;
+  --color-on-primary: #0f172a;
   --color-dark: #f8fafc;
   --color-text: #cbd5e1;
   --color-text-light: #94a3b8;
