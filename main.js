@@ -1,4 +1,40 @@
 // ================================
+// Hero Title — Character by Character Animation
+// ================================
+
+(function () {
+    const heroTitle = document.querySelector("[data-animate-chars]");
+    if (!heroTitle) return;
+
+    const accentWord = heroTitle.dataset.accentWord || "";
+    const words = heroTitle.textContent.trim().split(/\s+/);
+
+    heroTitle.textContent = "";
+    let charIndex = 0;
+
+    words.forEach((word, wordIndex) => {
+        const wordSpan = document.createElement("span");
+        wordSpan.className = "hero__word" + (word === accentWord ? " hero__word--accent" : "");
+
+        word.split("").forEach((ch) => {
+            const chSpan = document.createElement("span");
+            chSpan.className = "hero__char";
+            chSpan.textContent = ch;
+            chSpan.style.animationDelay = (charIndex * 0.055) + "s";
+            wordSpan.appendChild(chSpan);
+            charIndex++;
+        });
+
+        heroTitle.appendChild(wordSpan);
+
+        if (wordIndex < words.length - 1) {
+            heroTitle.appendChild(document.createTextNode(" "));
+            charIndex++;
+        }
+    });
+})();
+
+// ================================
 // Mobile Menu
 // ================================
 
@@ -167,6 +203,8 @@ toggleScrollTop(); // refresh ke baad bhi sahi state
 scrollTopBtn.addEventListener("click", () => {
     window.scrollTo({ top: 0 });
 });
+
+
 
 
 

@@ -33,7 +33,7 @@
     <meta name="theme-color" content="#2563eb">
 
     <meta name="google-site-verification" content="hupdmB1BQGmcklK-PO6w1jNTfuPzRqsOJyiX4aeYCdA" />
-    
+
     <!-- Design Tokens -->
     <link rel="stylesheet" href="css/tokens.css">
 
@@ -148,8 +148,7 @@
                         Hello, I'm
                     </p>
 
-                    <h1 class="hero__title" id="hero-title">
-                        Muhammad Junaid
+                    <h1 class="hero__title" id="hero-title" data-animate-chars data-accent-word="Junaid">Muhammad Junaid
                     </h1>
 
                     <p class="hero__tagline">
@@ -224,7 +223,7 @@
                         </p>
                     </div>
 
-                    <a href="assets/files/Muhammad-Junaid-CV.pdf" class="about__button" download>
+                    <a href="assets/files/Muhammad_Junaid_CV.pdf" class="about__button" download>
                         <span>Download CV</span>
                         <span class="about__button-icon" aria-hidden="true">⤓</span>
                     </a>
@@ -518,9 +517,12 @@
                             </h3>
 
                             <p class="project-card__description">
-                                A multi-page static educational website created
-                                with a clean responsive layout for presenting
-                                academic programs, faculty and contact information.
+                                A real client website for a 9th to 12th class tuition academy, built with HTML5,
+                                Tailwind CSS and vanilla JavaScript. It
+                                features program details, a faculty directory and a WhatsApp-based admission enquiry
+                                form, fully responsive and
+                                SEO-ready with structured data, and is live on Vercel while content updates continue
+                                with the client.
                             </p>
 
                             <div class="project-card__tags">
@@ -540,20 +542,56 @@
                     </article>
 
                     <!-- Project 03 -->
+
+                    <article class="project-card">
+                        <div class="project-card__image-wrapper">
+                            <img class="project-card__image" src="images/cybershield.png"
+                                alt="CyberShield SaaS landing page" loading="lazy">
+                        </div>
+                        <div class="project-card__content">
+                            <p class="project-card__number">03</p>
+                            <h3 class="project-card__title">
+                                CyberShield SaaS Landing Page
+                            </h3>
+                            <p class="project-card__description">
+                                CyberShield is a demo landing page I built during my frontend internship using only
+                                HTML5 and CSS, with hero, features,
+                                pricing, testimonials and contact sections. It is fully responsive, with a CSS-only dark
+                                mode and mobile menu,
+                                accessible focus states, and a contact form connected through Formspree. No JavaScript
+                                is used anywhere in the project.
+                            </p>
+                            <div class="project-card__tags">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                            </div>
+                            <a href="https://cybersecurity-saas-landing-page.vercel.app/" class="project-card__link"
+                                target="_blank" rel="noopener noreferrer">
+                                View Project
+                                <span aria-hidden="true">↗</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project 04 -->
                     <article class="project-card">
                         <div class="project-card__image-wrapper">
                             <img class="project-card__image" src="images/clearpay-project.png"
                                 alt="ClearPay fintech website" loading="lazy">
                         </div>
                         <div class="project-card__content">
-                            <p class="project-card__number">03</p>
+                            <p class="project-card__number">04</p>
                             <h3 class="project-card__title">
                                 ClearPay
                             </h3>
                             <p class="project-card__description">
-                                A multi-page static fintech website designed with a clean
-                                interface, responsive layouts and a professional financial
-                                product presentation.
+                                ClearPay is a fictional fintech website I built during my frontend internship: a static,
+                                multi-page site (Home,
+                                Features, Pricing, About and Contact) for a modern business payments platform. It
+                                features a clean, professional
+                                interface with a hero dashboard preview, feature cards and key stats, and responsive
+                                layouts that work across screen
+                                sizes. The project is frontend-only and deployed live on Vercel.
                             </p>
                             <div class="project-card__tags">
                                 <span>HTML5</span>
@@ -615,7 +653,7 @@
                                 </label>
 
                                 <input type="email" id="email" name="email" class="contact__input"
-                                    placeholder="your@email.com" autocomplete="email" required>
+                                    placeholder="ahmardev1@gmail.com" autocomplete="email" required>
 
                                 <small class="contact__error" id="email-error"></small>
                             </div>
@@ -763,4 +801,5 @@
     <!-- JavaScript -->
     <script src="main.js"></script>
 </body>
+
 </html>
