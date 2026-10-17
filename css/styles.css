@@ -275,7 +275,7 @@ button {
    RESPONSIVE
 ======================================== */
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .navbar__container {
     gap: 0.75rem;
   }
@@ -440,7 +440,7 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 40px;
+  min-height: 46px;
   padding: 0.2rem 1.25rem;
 
   color: #ffffff;
@@ -624,6 +624,8 @@ button {
   align-items: center;
   gap: 0.65rem;
 
+  min-height: 46px;
+  box-sizing: border-box;
   margin-top: 2rem;
   padding: 0.75rem 1.15rem;
 
@@ -756,8 +758,9 @@ button {
   }
 
   .about__card {
-    max-width: 650px;
+    max-width: none;
     width: 100%;
+    box-sizing: border-box;
   }
 }
 
@@ -1014,13 +1017,16 @@ button {
 
 .projects__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.5rem;
 }
 
 /* Project Card */
 
 .project-card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
 
   background-color: var(--color-white);
@@ -1056,7 +1062,7 @@ button {
   height: 100%;
   display: block;
 
-  object-fit: contain;
+  object-fit: cover;
   background-color: var(--color-background);
 
   transition: transform 300ms ease;
@@ -1069,6 +1075,9 @@ button {
 /* Project Content */
 
 .project-card__content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
   padding: 1.5rem;
 }
 
@@ -1098,6 +1107,10 @@ button {
 
   font-size: 0.9rem;
   line-height: 1.7;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
 }
 
 /* Technology Tags */
@@ -1148,6 +1161,8 @@ button {
     background-color var(--transition-fast),
     border-color var(--transition-fast),
     transform var(--transition-fast);
+  align-self: flex-start;
+  margin-top: auto;
 }
 
 .project-card__link:hover {
@@ -1175,14 +1190,9 @@ button {
   }
 
   .projects__grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .project-card:last-child {
-    grid-column: 1 / -1;
-    max-width: calc(50% - 0.75rem);
-    margin-inline: auto;
-  }
 }
 
 @media (max-width: 600px) {
@@ -1192,11 +1202,6 @@ button {
 
   .projects__grid {
     grid-template-columns: 1fr;
-  }
-
-  .project-card:last-child {
-    grid-column: auto;
-    max-width: none;
   }
 
   .project-card__content {
@@ -1217,6 +1222,10 @@ button {
   grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
   gap: 4rem;
   align-items: start;
+}
+
+.contact__container > * {
+  min-width: 0;
 }
 
 /* Form */
@@ -1347,11 +1356,15 @@ button {
 }
 
 .contact__success {
-  min-height: 1.2rem;
+  min-height: 0;
   margin: 0;
   color: var(--color-success);
   font-size: var(--text-sm);
   font-weight: 600;
+}
+
+.contact__success:empty {
+  display: none;
 }
 
 /* Contact Info */
@@ -1424,6 +1437,7 @@ button {
 }
 
 .contact__social-link {
+  min-width: 0;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -1504,6 +1518,7 @@ button {
 
   .contact__social-link {
     width: 100%;
+    box-sizing: border-box;
   }
 }
 
@@ -1599,7 +1614,7 @@ button {
 .scroll-top {
   position: fixed;
   right: 1.25rem;
-bottom: 5.5rem;
+  bottom: 1.25rem;
   z-index: 900;
 
   width: 44px;
@@ -1638,7 +1653,7 @@ bottom: 5.5rem;
 @media (max-width: 480px) {
   .scroll-top {
     right: 1rem;
-    bottom: 4.75rem;
+    bottom: 1rem;
   }
 }
 
@@ -1670,7 +1685,7 @@ bottom: 5.5rem;
 
 .whatsapp-float {
   position: fixed;
-  right: 1.25rem;
+  right: 5.5rem;
   bottom: 1.25rem;
   z-index: 900;
 
@@ -1701,7 +1716,7 @@ bottom: 5.5rem;
   .whatsapp-float {
     width: 48px;
     height: 48px;
-    right: 1rem;
+    right: 4.75rem;
     bottom: 1rem;
   }
 }
